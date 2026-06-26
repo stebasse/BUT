@@ -1,0 +1,2071 @@
+{
+  "created": "2026-06-24T16:58:34.903347",
+  "project": "C:/Users/StefanoBassetti/Desktop/Ste/Archivio/Altro/BUT_WebGIS_20260623_1302/BUT_WebGIS.qgz",
+  "zoom_min": 10,
+  "zoom_max": 14,
+  "max_vector_features": 50000,
+  "layers": [
+    {
+      "id": "vette",
+      "name": "Vette",
+      "groups": [
+        "but_webgis"
+      ],
+      "visible": true,
+      "type": "vector",
+      "geometry": "point",
+      "geojson": "data/vector/vette.geojson",
+      "tile": null,
+      "popup": true,
+      "opacity": 1.0,
+      "style_items": [
+        {
+          "id": "vette_single",
+          "label": "Vette",
+          "type": "single",
+          "style": {
+            "svg": null,
+            "radius": 5,
+            "size": 18,
+            "color": "#9a6a3a",
+            "fillColor": "#9a6a3a",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 1.0
+          },
+          "icon": null
+        }
+      ],
+      "label_field": "Nome",
+      "custom_basemap": null,
+      "but_grouped": false,
+      "but_groups": []
+    },
+    {
+      "id": "selle",
+      "name": "Selle",
+      "groups": [
+        "but_webgis"
+      ],
+      "visible": true,
+      "type": "vector",
+      "geometry": "point",
+      "geojson": "data/vector/selle.geojson",
+      "tile": null,
+      "popup": true,
+      "opacity": 1.0,
+      "style_items": [
+        {
+          "id": "selle_single",
+          "label": "Selle",
+          "type": "single",
+          "style": {
+            "svg": null,
+            "radius": 5,
+            "size": 18,
+            "color": "#9a6a3a",
+            "fillColor": "#9a6a3a",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 1.0
+          },
+          "icon": null
+        }
+      ],
+      "label_field": "name",
+      "custom_basemap": null,
+      "but_grouped": false,
+      "but_groups": []
+    },
+    {
+      "id": "poi",
+      "name": "POI",
+      "groups": [
+        "but_webgis"
+      ],
+      "visible": true,
+      "type": "vector",
+      "geometry": "point",
+      "geojson": "data/vector/poi.geojson",
+      "tile": null,
+      "popup": true,
+      "opacity": 1.0,
+      "style_items": [
+        {
+          "id": "poi_rifugio_0",
+          "label": "Rifugio",
+          "type": "rule",
+          "filter": "\"Tipo\" = 'Rifugio'",
+          "precedence": 0,
+          "style": {
+            "svg": "styles/svg/poi_rifugio_accommodation_alpinehut.svg",
+            "radius": 9.45,
+            "size": 18.9,
+            "color": "#2f7d32",
+            "fillColor": "#2f7d32",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 1.0
+          },
+          "icon": null
+        },
+        {
+          "id": "poi_bivacco_1",
+          "label": "Bivacco",
+          "type": "rule",
+          "filter": "\"Tipo\" = 'Bivacco'",
+          "precedence": 1,
+          "style": {
+            "svg": "styles/svg/poi_bivacco_accommodation_camping.svg",
+            "radius": 9.45,
+            "size": 18.9,
+            "color": "#2f7d32",
+            "fillColor": "#2f7d32",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 1.0
+          },
+          "icon": null
+        },
+        {
+          "id": "poi_alpe_2",
+          "label": "Alpe",
+          "type": "rule",
+          "filter": "\"Tipo\" = 'Alpe'",
+          "precedence": 2,
+          "style": {
+            "svg": "styles/svg/poi_alpe_accommodation_house.svg",
+            "radius": 9.45,
+            "size": 18.9,
+            "color": "#2f7d32",
+            "fillColor": "#2f7d32",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 1.0
+          },
+          "icon": null
+        },
+        {
+          "id": "poi_parcheggio_3",
+          "label": "Parcheggio",
+          "type": "rule",
+          "filter": "\"Tipo\" = 'Parcheggio'",
+          "precedence": 3,
+          "style": {
+            "svg": "styles/svg/poi_parcheggio_parking.svg",
+            "radius": 7.56,
+            "size": 15.12,
+            "color": "#2f7d32",
+            "fillColor": "#2f7d32",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 1.0
+          },
+          "icon": null
+        },
+        {
+          "id": "poi_campeggio_4",
+          "label": "Campeggio",
+          "type": "rule",
+          "filter": "\"Tipo\" = 'Campeggio'",
+          "precedence": 4,
+          "style": {
+            "svg": "styles/svg/poi_campeggio_accommodation_camping.svg",
+            "radius": 7.56,
+            "size": 15.12,
+            "color": "#7b3fb2",
+            "fillColor": "#7b3fb2",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 1.0
+          },
+          "icon": null
+        },
+        {
+          "id": "poi_camper_5",
+          "label": "Camper",
+          "type": "rule",
+          "filter": "\"Tipo\" = 'Camper'",
+          "precedence": 5,
+          "style": {
+            "svg": "styles/svg/poi_camper_accommodation_caravan_park.svg",
+            "radius": 7.56,
+            "size": 15.12,
+            "color": "#7b3fb2",
+            "fillColor": "#7b3fb2",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 1.0
+          },
+          "icon": null
+        }
+      ],
+      "label_field": "Nome",
+      "custom_basemap": null,
+      "but_grouped": false,
+      "but_groups": []
+    },
+    {
+      "id": "but_tracciati",
+      "name": "BUT_Tracciati",
+      "groups": [
+        "but_webgis"
+      ],
+      "visible": true,
+      "type": "vector",
+      "geometry": "line",
+      "geojson": "data/vector/but_tracciati.geojson",
+      "tile": null,
+      "popup": true,
+      "opacity": 1.0,
+      "style_items": [
+        {
+          "id": "but_tracciati_but_ultra_0",
+          "label": "BUT Ultra",
+          "type": "rule",
+          "filter": " \"Tracciato\"  =  'Ultra' ",
+          "precedence": 0,
+          "style": {
+            "color": "#232323",
+            "weight": 0.98,
+            "opacity": 0.0,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "but"
+        },
+        {
+          "id": "but_tracciati_salita_estrema_25_1",
+          "label": "Salita estrema >= 25%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= 25",
+          "precedence": 1,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.83,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Salita estrema >= 25%"
+        },
+        {
+          "id": "but_tracciati_salita_ripida_15_25_2",
+          "label": "Salita ripida 15 / 25%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= 15 AND \"slope_pct\" < 25",
+          "precedence": 2,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Salita ripida 15 / 25%"
+        },
+        {
+          "id": "but_tracciati_salita_impegnativa_10_15_3",
+          "label": "Salita impegnativa 10 / 15%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= 10 AND \"slope_pct\" < 15",
+          "precedence": 3,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Salita impegnativa 10 / 15%"
+        },
+        {
+          "id": "but_tracciati_salita_moderata_5_10_4",
+          "label": "Salita moderata 5 / 10%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= 5 AND \"slope_pct\" < 10",
+          "precedence": 4,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Salita moderata 5 / 10%"
+        },
+        {
+          "id": "but_tracciati_piano_lieve_10_5_5",
+          "label": "Piano / lieve -10 / 5%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= -10 AND \"slope_pct\" < 5",
+          "precedence": 5,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Piano / lieve -10 / 5%"
+        },
+        {
+          "id": "but_tracciati_discesa_25_10_6",
+          "label": "Discesa -25 / -10%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= -25 AND \"slope_pct\" < -10",
+          "precedence": 6,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Discesa -25 / -10%"
+        },
+        {
+          "id": "but_tracciati_discesa_forte_25_7",
+          "label": "Discesa forte < -25%",
+          "type": "rule",
+          "filter": "\"slope_pct\" < -25",
+          "precedence": 7,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Discesa forte < -25%"
+        },
+        {
+          "id": "but_tracciati_but_marathon_8",
+          "label": "BUT Marathon",
+          "type": "rule",
+          "filter": " \"Tracciato\"  =  'Marathon' ",
+          "precedence": 8,
+          "style": {
+            "color": "#becf50",
+            "weight": 0.98,
+            "opacity": 0.0,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "but"
+        },
+        {
+          "id": "but_tracciati_salita_estrema_25_9",
+          "label": "Salita estrema >= 25%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= 25",
+          "precedence": 9,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.83,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Salita estrema >= 25%"
+        },
+        {
+          "id": "but_tracciati_salita_ripida_15_25_10",
+          "label": "Salita ripida 15 / 25%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= 15 AND \"slope_pct\" < 25",
+          "precedence": 10,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Salita ripida 15 / 25%"
+        },
+        {
+          "id": "but_tracciati_salita_impegnativa_10_15_11",
+          "label": "Salita impegnativa 10 / 15%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= 10 AND \"slope_pct\" < 15",
+          "precedence": 11,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Salita impegnativa 10 / 15%"
+        },
+        {
+          "id": "but_tracciati_salita_moderata_5_10_12",
+          "label": "Salita moderata 5 / 10%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= 5 AND \"slope_pct\" < 10",
+          "precedence": 12,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Salita moderata 5 / 10%"
+        },
+        {
+          "id": "but_tracciati_piano_lieve_10_5_13",
+          "label": "Piano / lieve -10 / 5%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= -10 AND \"slope_pct\" < 5",
+          "precedence": 13,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Piano / lieve -10 / 5%"
+        },
+        {
+          "id": "but_tracciati_discesa_25_10_14",
+          "label": "Discesa -25 / -10%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= -25 AND \"slope_pct\" < -10",
+          "precedence": 14,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Discesa -25 / -10%"
+        },
+        {
+          "id": "but_tracciati_discesa_forte_25_15",
+          "label": "Discesa forte < -25%",
+          "type": "rule",
+          "filter": "\"slope_pct\" < -25",
+          "precedence": 15,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Discesa forte < -25%"
+        },
+        {
+          "id": "but_tracciati_but_race_16",
+          "label": "BUT Race",
+          "type": "rule",
+          "filter": " \"Tracciato\"  =  'Race' ",
+          "precedence": 16,
+          "style": {
+            "color": "#becf50",
+            "weight": 0.98,
+            "opacity": 0.0,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "but"
+        },
+        {
+          "id": "but_tracciati_salita_estrema_25_17",
+          "label": "Salita estrema >= 25%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= 25",
+          "precedence": 17,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.83,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Salita estrema >= 25%"
+        },
+        {
+          "id": "but_tracciati_salita_ripida_15_25_18",
+          "label": "Salita ripida 15 / 25%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= 15 AND \"slope_pct\" < 25",
+          "precedence": 18,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Salita ripida 15 / 25%"
+        },
+        {
+          "id": "but_tracciati_salita_impegnativa_10_15_19",
+          "label": "Salita impegnativa 10 / 15%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= 10 AND \"slope_pct\" < 15",
+          "precedence": 19,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Salita impegnativa 10 / 15%"
+        },
+        {
+          "id": "but_tracciati_salita_moderata_5_10_20",
+          "label": "Salita moderata 5 / 10%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= 5 AND \"slope_pct\" < 10",
+          "precedence": 20,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Salita moderata 5 / 10%"
+        },
+        {
+          "id": "but_tracciati_piano_lieve_10_5_21",
+          "label": "Piano / lieve -10 / 5%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= -10 AND \"slope_pct\" < 5",
+          "precedence": 21,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Piano / lieve -10 / 5%"
+        },
+        {
+          "id": "but_tracciati_discesa_25_10_22",
+          "label": "Discesa -25 / -10%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= -25 AND \"slope_pct\" < -10",
+          "precedence": 22,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Discesa -25 / -10%"
+        },
+        {
+          "id": "but_tracciati_discesa_forte_25_23",
+          "label": "Discesa forte < -25%",
+          "type": "rule",
+          "filter": "\"slope_pct\" < -25",
+          "precedence": 23,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Discesa forte < -25%"
+        },
+        {
+          "id": "but_tracciati_but_mini_24",
+          "label": "BUT Mini",
+          "type": "rule",
+          "filter": " \"Tracciato\"  =  'Mini' ",
+          "precedence": 24,
+          "style": {
+            "color": "#becf50",
+            "weight": 0.98,
+            "opacity": 0.0,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "but"
+        },
+        {
+          "id": "but_tracciati_salita_estrema_25_25",
+          "label": "Salita estrema >= 25%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= 25",
+          "precedence": 25,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.83,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Salita estrema >= 25%"
+        },
+        {
+          "id": "but_tracciati_salita_ripida_15_25_26",
+          "label": "Salita ripida 15 / 25%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= 15 AND \"slope_pct\" < 25",
+          "precedence": 26,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Salita ripida 15 / 25%"
+        },
+        {
+          "id": "but_tracciati_salita_impegnativa_10_15_27",
+          "label": "Salita impegnativa 10 / 15%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= 10 AND \"slope_pct\" < 15",
+          "precedence": 27,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Salita impegnativa 10 / 15%"
+        },
+        {
+          "id": "but_tracciati_salita_moderata_5_10_28",
+          "label": "Salita moderata 5 / 10%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= 5 AND \"slope_pct\" < 10",
+          "precedence": 28,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Salita moderata 5 / 10%"
+        },
+        {
+          "id": "but_tracciati_piano_lieve_10_5_29",
+          "label": "Piano / lieve -10 / 5%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= -10 AND \"slope_pct\" < 5",
+          "precedence": 29,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Piano / lieve -10 / 5%"
+        },
+        {
+          "id": "but_tracciati_discesa_25_10_30",
+          "label": "Discesa -25 / -10%",
+          "type": "rule",
+          "filter": "\"slope_pct\" >= -25 AND \"slope_pct\" < -10",
+          "precedence": 30,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Discesa -25 / -10%"
+        },
+        {
+          "id": "but_tracciati_discesa_forte_25_31",
+          "label": "Discesa forte < -25%",
+          "type": "rule",
+          "filter": "\"slope_pct\" < -25",
+          "precedence": 31,
+          "style": {
+            "color": "#ffffff",
+            "weight": 9.07,
+            "opacity": 0.902,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null,
+          "toc_group": "Discesa forte < -25%"
+        }
+      ],
+      "label_field": null,
+      "custom_basemap": null,
+      "but_grouped": true,
+      "but_groups": [
+        "Ultra",
+        "Marathon",
+        "Race",
+        "Mini"
+      ]
+    },
+    {
+      "id": "sbarramenti_artificiali",
+      "name": "Sbarramenti_Artificiali",
+      "groups": [
+        "but_webgis"
+      ],
+      "visible": true,
+      "type": "vector",
+      "geometry": "line",
+      "geojson": "data/vector/sbarramenti_artificiali.geojson",
+      "tile": null,
+      "popup": false,
+      "opacity": 1.0,
+      "style_items": [
+        {
+          "id": "sbarramenti_artificiali_single",
+          "label": "Sbarramenti_Artificiali",
+          "type": "single",
+          "style": {
+            "color": "#d8a2b8",
+            "weight": 2,
+            "opacity": 1,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null
+        }
+      ],
+      "label_field": null,
+      "custom_basemap": null,
+      "but_grouped": false,
+      "but_groups": []
+    },
+    {
+      "id": "sentieri",
+      "name": "Sentieri",
+      "groups": [
+        "but_webgis"
+      ],
+      "visible": true,
+      "type": "vector",
+      "geometry": "line",
+      "geojson": "data/vector/sentieri.geojson",
+      "tile": null,
+      "popup": false,
+      "opacity": 0.15,
+      "style_items": [
+        {
+          "id": "sentieri_single",
+          "label": "Sentieri",
+          "type": "single",
+          "style": {
+            "color": "#8a3ffc",
+            "weight": 2,
+            "opacity": 1,
+            "lineCap": "round",
+            "lineJoin": "round",
+            "dashArray": "6,4"
+          },
+          "icon": null
+        }
+      ],
+      "label_field": null,
+      "custom_basemap": null,
+      "but_grouped": false,
+      "but_groups": []
+    },
+    {
+      "id": "strade",
+      "name": "Strade",
+      "groups": [
+        "but_webgis"
+      ],
+      "visible": true,
+      "type": "vector",
+      "geometry": "line",
+      "geojson": "data/vector/strade.geojson",
+      "tile": null,
+      "popup": false,
+      "opacity": 1.0,
+      "style_items": [
+        {
+          "id": "strade_single",
+          "label": "Strade",
+          "type": "single",
+          "style": {
+            "color": "#f8f8f8",
+            "weight": 3,
+            "opacity": 1,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null
+        }
+      ],
+      "label_field": null,
+      "custom_basemap": null,
+      "but_grouped": false,
+      "but_groups": []
+    },
+    {
+      "id": "edifici",
+      "name": "Edifici",
+      "groups": [
+        "but_webgis"
+      ],
+      "visible": true,
+      "type": "vector",
+      "geometry": "polygon",
+      "geojson": "data/vector/edifici.geojson",
+      "tile": null,
+      "popup": false,
+      "opacity": 1.0,
+      "style_items": [
+        {
+          "id": "edifici_single",
+          "label": "Edifici",
+          "type": "single",
+          "style": {
+            "color": "#397b2c",
+            "weight": 0.98,
+            "opacity": 1.0,
+            "fillColor": "#69c94f",
+            "fillOpacity": 0.9
+          },
+          "icon": null
+        }
+      ],
+      "label_field": null,
+      "custom_basemap": null,
+      "but_grouped": false,
+      "but_groups": []
+    },
+    {
+      "id": "laghi",
+      "name": "Laghi",
+      "groups": [
+        "but_webgis"
+      ],
+      "visible": true,
+      "type": "vector",
+      "geometry": "polygon",
+      "geojson": "data/vector/laghi.geojson",
+      "tile": null,
+      "popup": false,
+      "opacity": 1.0,
+      "style_items": [
+        {
+          "id": "laghi_single",
+          "label": "Laghi",
+          "type": "single",
+          "style": {
+            "color": "#5aa9d6",
+            "weight": 1,
+            "opacity": 1.0,
+            "fillColor": "#9fd7ff",
+            "fillOpacity": 0.85
+          },
+          "icon": null
+        }
+      ],
+      "label_field": "Nome",
+      "custom_basemap": null,
+      "but_grouped": false,
+      "but_groups": []
+    },
+    {
+      "id": "ghiacciai",
+      "name": "Ghiacciai",
+      "groups": [
+        "but_webgis"
+      ],
+      "visible": true,
+      "type": "vector",
+      "geometry": "polygon",
+      "geojson": "data/vector/ghiacciai.geojson",
+      "tile": null,
+      "popup": false,
+      "opacity": 0.552,
+      "style_items": [
+        {
+          "id": "ghiacciai_single",
+          "label": "Ghiacciai",
+          "type": "single",
+          "style": {
+            "color": "#63bdbd",
+            "weight": 0.98,
+            "opacity": 1.0,
+            "fillColor": "#a7eeee",
+            "fillOpacity": 0.75
+          },
+          "icon": null
+        }
+      ],
+      "label_field": "Nome",
+      "custom_basemap": null,
+      "but_grouped": false,
+      "but_groups": []
+    },
+    {
+      "id": "reticolo_idrografico",
+      "name": "Reticolo_Idrografico",
+      "groups": [
+        "but_webgis"
+      ],
+      "visible": true,
+      "type": "vector",
+      "geometry": "line",
+      "geojson": "data/vector/reticolo_idrografico.geojson",
+      "tile": null,
+      "popup": false,
+      "opacity": 1.0,
+      "style_items": [
+        {
+          "id": "reticolo_idrografico_single",
+          "label": "Reticolo_Idrografico",
+          "type": "single",
+          "style": {
+            "color": "#4b7db6",
+            "weight": 1.13,
+            "opacity": 1.0,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null
+        }
+      ],
+      "label_field": "Nome",
+      "custom_basemap": null,
+      "but_grouped": false,
+      "but_groups": []
+    },
+    {
+      "id": "isoipse_50m",
+      "name": "Isoipse_50m",
+      "groups": [
+        "but_webgis"
+      ],
+      "visible": true,
+      "type": "vector",
+      "geometry": "line",
+      "geojson": null,
+      "tile": "tiles/isoipse_50m",
+      "popup": false,
+      "opacity": 1.0,
+      "style_items": [
+        {
+          "id": "isoipse_50m_direttrici_100_0",
+          "label": "Direttrici 100",
+          "type": "rule",
+          "filter": " \"ELEV\" % 100 = 0",
+          "precedence": 0,
+          "style": {
+            "color": "#808080",
+            "weight": 0.57,
+            "opacity": 1.0,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null
+        },
+        {
+          "id": "isoipse_50m_ausiliarie_50_1",
+          "label": "Ausiliarie 50",
+          "type": "rule",
+          "filter": " \"ELEV\" % 50 = 0",
+          "precedence": 1,
+          "style": {
+            "color": "#808080",
+            "weight": 0.57,
+            "opacity": 1.0,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null
+        }
+      ],
+      "label_field": null,
+      "custom_basemap": "i",
+      "but_grouped": false,
+      "but_groups": [],
+      "hidden_from_toc": true,
+      "legend_single": true,
+      "hidden_from_legend": true
+    },
+    {
+      "id": "isoipse_50m_ghiacciai",
+      "name": "Isoipse_50m_Ghiacciai",
+      "groups": [
+        "but_webgis"
+      ],
+      "visible": true,
+      "type": "vector",
+      "geometry": "line",
+      "geojson": null,
+      "tile": "tiles/isoipse_50m_ghiacciai",
+      "popup": false,
+      "opacity": 1.0,
+      "style_items": [
+        {
+          "id": "isoipse_50m_ghiacciai_direttrici_100_m_0",
+          "label": "Direttrici 100 m",
+          "type": "rule",
+          "filter": "\"ELEV\" % 100 = 0",
+          "precedence": 0,
+          "style": {
+            "color": "#4fc2ff",
+            "weight": 0.76,
+            "opacity": 1.0,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null
+        },
+        {
+          "id": "isoipse_50m_ghiacciai_ausiliarie_50_m_1",
+          "label": "Ausiliarie 50 m",
+          "type": "rule",
+          "filter": "\"ELEV\" % 50 = 0",
+          "precedence": 1,
+          "style": {
+            "color": "#4fc2ff",
+            "weight": 0.76,
+            "opacity": 1.0,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null
+        }
+      ],
+      "label_field": null,
+      "custom_basemap": "i",
+      "but_grouped": false,
+      "but_groups": [],
+      "hidden_from_toc": true,
+      "legend_single": true,
+      "hidden_from_legend": true
+    },
+    {
+      "id": "confine_nazionale",
+      "name": "Confine_Nazionale",
+      "groups": [
+        "but_webgis"
+      ],
+      "visible": true,
+      "type": "vector",
+      "geometry": "line",
+      "geojson": "data/vector/confine_nazionale.geojson",
+      "tile": null,
+      "popup": false,
+      "opacity": 1.0,
+      "style_items": [
+        {
+          "id": "confine_nazionale_single",
+          "label": "Confine_Nazionale",
+          "type": "single",
+          "style": {
+            "color": "#ff01fb",
+            "weight": 7.56,
+            "opacity": 1.0,
+            "lineCap": "round",
+            "lineJoin": "round"
+          },
+          "icon": null
+        }
+      ],
+      "label_field": null,
+      "custom_basemap": null,
+      "but_grouped": false,
+      "but_groups": []
+    },
+    {
+      "id": "uso_suolo",
+      "name": "Uso_Suolo",
+      "groups": [
+        "but_webgis"
+      ],
+      "visible": true,
+      "type": "vector",
+      "geometry": "polygon",
+      "geojson": null,
+      "tile": "tiles/uso_suolo",
+      "popup": false,
+      "opacity": 0.379,
+      "style_items": [
+        {
+          "id": "uso_suolo_continuous_urban_fabric_0",
+          "label": "Continuous urban fabric",
+          "type": "rule",
+          "filter": "code_18 = 111",
+          "precedence": 0,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#e6004d",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_discontinuous_urban_fabric_1",
+          "label": "Discontinuous urban fabric",
+          "type": "rule",
+          "filter": "code_18 = 112",
+          "precedence": 1,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#ff0000",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_industrial_or_commercial_units_2",
+          "label": "Industrial or commercial units",
+          "type": "rule",
+          "filter": "code_18 = 121",
+          "precedence": 2,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#cc4df2",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_road_and_rail_networks_and_associated_land_3",
+          "label": "Road and rail networks and associated land",
+          "type": "rule",
+          "filter": "code_18 = 122",
+          "precedence": 3,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#cc0000",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_port_areas_4",
+          "label": "Port areas",
+          "type": "rule",
+          "filter": "code_18 = 123",
+          "precedence": 4,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#e6cccc",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_airports_5",
+          "label": "Airports",
+          "type": "rule",
+          "filter": "code_18 = 124",
+          "precedence": 5,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#e6cce6",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_mineral_extraction_sites_6",
+          "label": "Mineral extraction sites",
+          "type": "rule",
+          "filter": "code_18 = 131",
+          "precedence": 6,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#a600cc",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_dump_sites_7",
+          "label": "Dump sites",
+          "type": "rule",
+          "filter": "code_18 = 132",
+          "precedence": 7,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#a64d00",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_construction_sites_8",
+          "label": "Construction sites",
+          "type": "rule",
+          "filter": "code_18 = 133",
+          "precedence": 8,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#ff4dff",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_green_urban_areas_9",
+          "label": "Green urban areas",
+          "type": "rule",
+          "filter": "code_18 = 141",
+          "precedence": 9,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#ffa6ff",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_sport_and_leisure_facilities_10",
+          "label": "Sport and leisure facilities",
+          "type": "rule",
+          "filter": "code_18 = 142",
+          "precedence": 10,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#ffe6ff",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_non_irrigated_arable_land_11",
+          "label": "Non-irrigated arable land",
+          "type": "rule",
+          "filter": "code_18 = 211",
+          "precedence": 11,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#ffffa8",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_permanently_irrigated_land_12",
+          "label": "Permanently irrigated land",
+          "type": "rule",
+          "filter": "code_18 = 212",
+          "precedence": 12,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#ffff00",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_rice_fields_13",
+          "label": "Rice fields",
+          "type": "rule",
+          "filter": "code_18 = 213",
+          "precedence": 13,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#e6e600",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_vineyards_14",
+          "label": "Vineyards",
+          "type": "rule",
+          "filter": "code_18 = 221",
+          "precedence": 14,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#e68000",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_fruit_trees_and_berry_plantations_15",
+          "label": "Fruit trees and berry plantations",
+          "type": "rule",
+          "filter": "code_18 = 222",
+          "precedence": 15,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#f2a64d",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_olive_groves_16",
+          "label": "Olive groves",
+          "type": "rule",
+          "filter": "code_18 = 223",
+          "precedence": 16,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#e6a600",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_pastures_17",
+          "label": "Pastures",
+          "type": "rule",
+          "filter": "code_18 = 231",
+          "precedence": 17,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#e6e64d",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_annual_crops_associated_with_permanent_crops_18",
+          "label": "Annual crops associated with permanent crops",
+          "type": "rule",
+          "filter": "code_18 = 241",
+          "precedence": 18,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#ffe6a6",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_complex_cultivation_patterns_19",
+          "label": "Complex cultivation patterns",
+          "type": "rule",
+          "filter": "code_18 = 242",
+          "precedence": 19,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#ffe64d",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_land_principally_occupied_by_agriculture_with_significant_areas_of_natural_vegetation_20",
+          "label": "Land principally occupied by agriculture with significant areas of natural vegetation",
+          "type": "rule",
+          "filter": "code_18 = 243",
+          "precedence": 20,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#e6cc4d",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_agro_forestry_areas_21",
+          "label": "Agro-forestry areas",
+          "type": "rule",
+          "filter": "code_18 = 244",
+          "precedence": 21,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#f2cca6",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_broad_leaved_forest_22",
+          "label": "Broad-leaved forest",
+          "type": "rule",
+          "filter": "code_18 = 311",
+          "precedence": 22,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#80ff00",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_coniferous_forest_23",
+          "label": "Coniferous forest",
+          "type": "rule",
+          "filter": "code_18 = 312",
+          "precedence": 23,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#00a600",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_mixed_forest_24",
+          "label": "Mixed forest",
+          "type": "rule",
+          "filter": "code_18 = 313",
+          "precedence": 24,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#4dff00",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_natural_grasslands_25",
+          "label": "Natural grasslands",
+          "type": "rule",
+          "filter": "code_18 = 321",
+          "precedence": 25,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#ccf24d",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_moors_and_heathland_26",
+          "label": "Moors and heathland",
+          "type": "rule",
+          "filter": "code_18 = 322",
+          "precedence": 26,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#a6ff80",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_sclerophyllous_vegetation_27",
+          "label": "Sclerophyllous vegetation",
+          "type": "rule",
+          "filter": "code_18 = 323",
+          "precedence": 27,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#a6e64d",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_transitional_woodland_shrub_28",
+          "label": "Transitional woodland-shrub",
+          "type": "rule",
+          "filter": "code_18 = 324",
+          "precedence": 28,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#a6f200",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_beaches_dunes_sands_29",
+          "label": "Beaches - dunes - sands",
+          "type": "rule",
+          "filter": "code_18 = 331",
+          "precedence": 29,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#e6e6e6",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_bare_rocks_30",
+          "label": "Bare rocks",
+          "type": "rule",
+          "filter": "code_18 = 332",
+          "precedence": 30,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#bfa2a2",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_sparsely_vegetated_areas_31",
+          "label": "Sparsely vegetated areas",
+          "type": "rule",
+          "filter": "code_18 = 333",
+          "precedence": 31,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#ccffcc",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_burnt_areas_32",
+          "label": "Burnt areas",
+          "type": "rule",
+          "filter": "code_18 = 334",
+          "precedence": 32,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#000000",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_glaciers_and_perpetual_snow_33",
+          "label": "Glaciers and perpetual snow",
+          "type": "rule",
+          "filter": "code_18 = 335",
+          "precedence": 33,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#a6e6cc",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_inland_marshes_34",
+          "label": "Inland marshes",
+          "type": "rule",
+          "filter": "code_18 = 411",
+          "precedence": 34,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#a6a6ff",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_peat_bogs_35",
+          "label": "Peat bogs",
+          "type": "rule",
+          "filter": "code_18 = 412",
+          "precedence": 35,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#4d4dff",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_salt_marshes_36",
+          "label": "Salt marshes",
+          "type": "rule",
+          "filter": "code_18 = 421",
+          "precedence": 36,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#ccccff",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_salines_37",
+          "label": "Salines",
+          "type": "rule",
+          "filter": "code_18 = 422",
+          "precedence": 37,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#e6e6ff",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_intertidal_flats_38",
+          "label": "Intertidal flats",
+          "type": "rule",
+          "filter": "code_18 = 423",
+          "precedence": 38,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#a6a6e6",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_water_courses_39",
+          "label": "Water courses",
+          "type": "rule",
+          "filter": "code_18 = 511",
+          "precedence": 39,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#00ccf2",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_water_bodies_40",
+          "label": "Water bodies",
+          "type": "rule",
+          "filter": "code_18 = 512",
+          "precedence": 40,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#80f2e6",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_coastal_lagoons_41",
+          "label": "Coastal lagoons",
+          "type": "rule",
+          "filter": "code_18 = 521",
+          "precedence": 41,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#00ffa6",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_estuaries_42",
+          "label": "Estuaries",
+          "type": "rule",
+          "filter": "code_18 = 522",
+          "precedence": 42,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#a6ffe6",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_sea_and_ocean_43",
+          "label": "Sea and ocean",
+          "type": "rule",
+          "filter": "code_18 = 523",
+          "precedence": 43,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#e6f2ff",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        },
+        {
+          "id": "uso_suolo_nodata_44",
+          "label": "NODATA",
+          "type": "rule",
+          "filter": "code_18 = 999",
+          "precedence": 44,
+          "style": {
+            "color": "#000000",
+            "weight": 3.78,
+            "opacity": 1.0,
+            "fillColor": "#ffffff",
+            "fillOpacity": 0.55
+          },
+          "icon": null
+        }
+      ],
+      "label_field": null,
+      "custom_basemap": "i",
+      "but_grouped": false,
+      "but_groups": [],
+      "hidden_from_toc": true,
+      "hidden_from_legend": true
+    },
+    {
+      "id": "slope",
+      "name": "Slope",
+      "groups": [
+        "Raster COG 3857"
+      ],
+      "visible": false,
+      "type": "raster",
+      "geometry": null,
+      "geojson": null,
+      "tile": "tiles/slope",
+      "popup": false,
+      "opacity": 0.05,
+      "style_items": [],
+      "label_field": null,
+      "custom_basemap": "ii",
+      "but_grouped": false,
+      "but_groups": []
+    },
+    {
+      "id": "hillshade",
+      "name": "Hillshade",
+      "groups": [
+        "Raster COG 3857"
+      ],
+      "visible": false,
+      "type": "raster",
+      "geometry": null,
+      "geojson": null,
+      "tile": "tiles/hillshade",
+      "popup": false,
+      "opacity": 0.18,
+      "style_items": [],
+      "label_field": null,
+      "custom_basemap": "i",
+      "but_grouped": false,
+      "but_groups": []
+    },
+    {
+      "id": "aoi",
+      "name": "AOI",
+      "groups": [
+        "but_webgis"
+      ],
+      "visible": false,
+      "type": "vector",
+      "geometry": "polygon",
+      "geojson": "data/vector/aoi.geojson",
+      "tile": null,
+      "popup": false,
+      "opacity": 1.0,
+      "style_items": [
+        {
+          "id": "aoi_single",
+          "label": "AOI",
+          "type": "single",
+          "style": {
+            "color": "#1f7a3a",
+            "weight": 2,
+            "opacity": 1,
+            "fillColor": "#1f7a3a",
+            "fillOpacity": 0
+          },
+          "icon": null
+        }
+      ],
+      "label_field": null,
+      "custom_basemap": null,
+      "but_grouped": false,
+      "but_groups": [],
+      "hidden_from_toc": true
+    }
+  ],
+  "toc": [
+    {
+      "type": "group",
+      "name": "but_webgis",
+      "open": true,
+      "children": [
+        {
+          "type": "layer",
+          "id": "vette",
+          "name": "Vette",
+          "visible": true,
+          "children": []
+        },
+        {
+          "type": "layer",
+          "id": "selle",
+          "name": "Selle",
+          "visible": true,
+          "children": []
+        },
+        {
+          "type": "layer",
+          "id": "poi",
+          "name": "POI",
+          "visible": true,
+          "children": [
+            {
+              "type": "rule",
+              "id": "poi_rifugio_0",
+              "layer_id": "poi",
+              "name": "Rifugio",
+              "visible": true,
+              "icon": null
+            },
+            {
+              "type": "rule",
+              "id": "poi_bivacco_1",
+              "layer_id": "poi",
+              "name": "Bivacco",
+              "visible": true,
+              "icon": null
+            },
+            {
+              "type": "rule",
+              "id": "poi_alpe_2",
+              "layer_id": "poi",
+              "name": "Alpe",
+              "visible": true,
+              "icon": null
+            },
+            {
+              "type": "rule",
+              "id": "poi_parcheggio_3",
+              "layer_id": "poi",
+              "name": "Parcheggio",
+              "visible": true,
+              "icon": null
+            },
+            {
+              "type": "rule",
+              "id": "poi_campeggio_4",
+              "layer_id": "poi",
+              "name": "Campeggio",
+              "visible": true,
+              "icon": null
+            },
+            {
+              "type": "rule",
+              "id": "poi_camper_5",
+              "layer_id": "poi",
+              "name": "Camper",
+              "visible": true,
+              "icon": null
+            }
+          ]
+        },
+        {
+          "type": "layer",
+          "id": "but_tracciati",
+          "name": "BUT_Tracciati",
+          "visible": true,
+          "children": [
+            {
+              "type": "but_group",
+              "id": "Ultra",
+              "layer_id": "but_tracciati",
+              "name": "BUT Ultra",
+              "visible": true,
+              "icon": null
+            },
+            {
+              "type": "but_group",
+              "id": "Marathon",
+              "layer_id": "but_tracciati",
+              "name": "BUT Marathon",
+              "visible": true,
+              "icon": null
+            },
+            {
+              "type": "but_group",
+              "id": "Race",
+              "layer_id": "but_tracciati",
+              "name": "BUT Race",
+              "visible": true,
+              "icon": null
+            },
+            {
+              "type": "but_group",
+              "id": "Mini",
+              "layer_id": "but_tracciati",
+              "name": "BUT Mini",
+              "visible": true,
+              "icon": null
+            }
+          ]
+        },
+        {
+          "type": "layer",
+          "id": "sbarramenti_artificiali",
+          "name": "Sbarramenti_Artificiali",
+          "visible": true,
+          "children": []
+        },
+        {
+          "type": "layer",
+          "id": "sentieri",
+          "name": "Sentieri",
+          "visible": true,
+          "children": []
+        },
+        {
+          "type": "layer",
+          "id": "strade",
+          "name": "Strade",
+          "visible": true,
+          "children": []
+        },
+        {
+          "type": "layer",
+          "id": "edifici",
+          "name": "Edifici",
+          "visible": true,
+          "children": []
+        },
+        {
+          "type": "layer",
+          "id": "laghi",
+          "name": "Laghi",
+          "visible": true,
+          "children": []
+        },
+        {
+          "type": "layer",
+          "id": "ghiacciai",
+          "name": "Ghiacciai",
+          "visible": true,
+          "children": []
+        },
+        {
+          "type": "layer",
+          "id": "reticolo_idrografico",
+          "name": "Reticolo_Idrografico",
+          "visible": true,
+          "children": []
+        },
+        {
+          "type": "layer",
+          "id": "confine_nazionale",
+          "name": "Confine_Nazionale",
+          "visible": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "type": "combo_layer",
+      "id": "isoipse_combo",
+      "name": "Isoipse",
+      "visible": true,
+      "layer_ids": [
+        "isoipse_50m",
+        "isoipse_50m_ghiacciai"
+      ]
+    }
+  ]
+}

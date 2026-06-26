@@ -1,0 +1,26 @@
+#map-legend {
+  bottom: 28px;
+  max-width: 350px;
+  max-height: 42vh;
+  overflow: auto;
+}
+
+.legend-row {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  font-size: 12px;
+  margin: 4px;
+}
+
+.legend-group-title {
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  margin-top: 8px;
+}
+
+#legend,
+.legend,
+#active-legend {
+  display: none !important;
+}

@@ -1,0 +1,19 @@
+.qgis-point-icon {
+  background: transparent;
+  border: 0;
+}
+
+.isoipse-double-symbol {
+  display: inline-flex;
+  flex-direction: column;
+  width: 32px;
+  height: 18px;
+  justify-content: center;
+  gap: 1px;
+  flex: 0 0 32px;
+}
+
+.isoipse-double-symbol .legend-svg {
+  width: 32px;
+  height: 8px;
+}

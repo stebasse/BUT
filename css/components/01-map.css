@@ -1,0 +1,30 @@
+html, body, #map {
+  height: 100%;
+  margin: 0;
+}
+
+#map {
+  position: absolute;
+  inset: 0;
+  background: #d9ded2;
+}
+
+.loading {
+  position: absolute;
+  z-index: 1500;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000b;
+  color: white;
+  padding: 7px;
+  border-radius: 7px;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden-by-basemap {
+  display: none !important;
+}
