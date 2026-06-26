@@ -5,7 +5,7 @@ function tile(layer, pane = "tilePaneQGIS") {
     return tileLayers[key];
   }
 
-  tileLayers[key] = L.tileLayer(`../${layer.tile}/{z}/{x}/{y}.png`, {
+  tileLayers[key] = L.tileLayer(`${layer.tile}/{z}/{x}/{y}.png`, {
     pane,
     opacity: layer.opacity ?? 1,
     maxNativeZoom: config.zoom_max,
@@ -24,7 +24,7 @@ async function vector(layer) {
     return vectorLayers[layer.id];
   }
 
-  const data = await loadJson(`../${layer.geojson}`);
+  const data = await loadJson(`${layer.geojson}`);
   const group = L.layerGroup();
 
   if ((norm(layer.name).includes("vette") || norm(layer.name).includes("selle")) && data.features) {

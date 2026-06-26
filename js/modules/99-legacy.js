@@ -156,7 +156,7 @@ function qgisLikePointIcon(layer, feature) {
   if (style.svg) {
     const size = style.size || 24;
     return L.icon({
-      iconUrl: `../${style.svg}`,
+      iconUrl: `${style.svg}`,
       iconSize: [size, size],
       iconAnchor: [size / 2, size / 2]
     });

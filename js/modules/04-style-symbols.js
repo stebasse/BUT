@@ -50,11 +50,11 @@ function symbolSvg(layer, item = null) {
   }
 
   if (style.svg) {
-    return `<img class="legend-icon" src="../${style.svg}">`;
+    return `<img class="legend-icon" src="${style.svg}">`;
   }
 
   if (item?.icon) {
-    return `<img class="legend-icon" src="../${item.icon}">`;
+    return `<img class="legend-icon" src="${item.icon}">`;
   }
 
   if (layerName.includes("edifici")) {
