@@ -28,7 +28,7 @@ const BASEMAPS = {
     url: "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
   },
   none: {
-    label: "Ombreggiatura",
+    label: "Personalizzata",
     type: "none"
   }
 };

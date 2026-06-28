@@ -28,7 +28,7 @@ const BASEMAPS = {
     url: "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
   },
   none: {
-    label: "Ombreggiatura",
+    label: "Personalizzata",
     type: "none"
   }
 };
@@ -76,13 +76,17 @@ function prettifyLabel(value) {
 }
 
 async function loadJson(url) {
-  const response = await fetch(url);
+  try {
+    const response = await fetch(url);
 
-  if (!response.ok) {
-    throw Error(url);
+    if (!response.ok) {
+      throw Error(`${url} (${response.status})`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    throw Error(`Errore caricamento: ${url} - ${error.message}`);
   }
-
-  return await response.json();
 }
 
 function setLoading(show) {
@@ -560,6 +564,28 @@ function activeBut(layer, feature) {
   return !set || !group || set.has(group);
 }
 
+function defaultButGroups(layer) {
+  const fromLayer = Array.isArray(layer?.but_groups)
+    ? layer.but_groups.filter(Boolean)
+    : [];
+
+  if (fromLayer.length) return fromLayer;
+
+  if (!isButLayer(layer)) return [];
+
+  const tocNode = flattenTocNodes(config?.toc || []).find(node => node.id === layer.id);
+  const fromToc = (tocNode?.children || [])
+    .filter(child => child.type === "but_group" && child.visible)
+    .map(child => child.id)
+    .filter(Boolean);
+
+  return fromToc.length ? fromToc : ["Ultra"];
+}
+
+function isButGroupChecked(layer, rule) {
+  return defaultButGroups(layer).includes(rule.id);
+}
+
 function qgisLikePointIcon(layer, feature) {
   const name = norm(layer.name);
   const styleId = feature.properties?.__style_id;
@@ -695,9 +721,46 @@ function qgisLikeLineStyle(layer, style, item = null) {
 }
 
 
+function butSlopeStyleFromFeature(feature) {
+  const v = Number(feature?.properties?.slope_pct);
+  const base = {
+    weight: 4.7,
+    opacity: 1,
+    lineCap: "round",
+    lineJoin: "round",
+    outlineColor: "#ffffff",
+    outlineWeight: 7.9,
+    outlineOpacity: 1
+  };
+
+  if (Number.isFinite(v)) {
+    if (v >= 25) return { ...base, color: "#76263b" };
+    if (v >= 15) return { ...base, color: "#cc4a3d" };
+    if (v >= 10) return { ...base, color: "#e69037" };
+    if (v >= 5) return { ...base, color: "#f4cf52" };
+    if (v >= -10) return { ...base, color: "#b4b4aa" };
+    if (v >= -25) return { ...base, color: "#608bc4" };
+    return { ...base, color: "#315596" };
+  }
+
+  const id = norm(feature?.properties?.__style_id || "");
+  if (id.includes("salita_estrema")) return { ...base, color: "#76263b" };
+  if (id.includes("salita_ripida")) return { ...base, color: "#cc4a3d" };
+  if (id.includes("salita_impegnativa")) return { ...base, color: "#e69037" };
+  if (id.includes("salita_moderata")) return { ...base, color: "#f4cf52" };
+  if (id.includes("piano") || id.includes("lieve")) return { ...base, color: "#b4b4aa" };
+  if (id.includes("discesa_25_10")) return { ...base, color: "#608bc4" };
+  if (id.includes("discesa_forte")) return { ...base, color: "#315596" };
+
+  return { ...base, color: "#b4b4aa" };
+}
+
+
 function outlineStyle(layer, feature) {
   const item = styleItem(layer, feature.properties?.__style_id);
-  const style = qgisLikeLineStyle(layer, item?.style || {}, item);
+  const style = isButLayer(layer)
+    ? butSlopeStyleFromFeature(feature)
+    : qgisLikeLineStyle(layer, item?.style || {}, item);
 
   return {
     pane: "vectorOutlinePane",
@@ -724,7 +787,9 @@ function pathStyle(layer, feature) {
     fillOpacity: 0.15
   };
 
-  style = qgisLikeLineStyle(layer, style, item);
+  style = isButLayer(layer)
+    ? butSlopeStyleFromFeature(feature)
+    : qgisLikeLineStyle(layer, style, item);
 
   return {
     ...style,
@@ -733,8 +798,9 @@ function pathStyle(layer, feature) {
 }
 
 function filterFeature(layer, feature) {
-  const id = feature.properties?.__style_id;
+  if (isButLayer(layer)) return activeBut(layer, feature);
 
+  const id = feature.properties?.__style_id;
   return (!id || activeStyle(layer, id)) && activeBut(layer, feature);
 }
 
@@ -769,6 +835,11 @@ async function vector(layer) {
 
   if ((norm(layer.name).includes("vette") || norm(layer.name).includes("selle")) && data.features) {
     data.features.sort((a, b) => featureElevation(b) - featureElevation(a));
+  }
+
+  if (isButLayer(layer) && data.features) {
+    const order = { Mini: 0, Race: 1, Marathon: 2, Ultra: 3 };
+    data.features.sort((a, b) => (order[a.properties?.Tracciato] ?? 0) - (order[b.properties?.Tracciato] ?? 0));
   }
 
   if (layer.geometry === "line" && hasOutline(layer)) {
@@ -820,6 +891,8 @@ async function addLayer(id) {
     enforceLayerOrder();
     updatePeakLabelsOnZoom();
     updateLegend();
+  } catch (error) {
+    console.warn(`Layer non caricato: ${id}`, error);
   } finally {
     setLoading(false);
   }
@@ -1100,12 +1173,12 @@ function renderTree(nodes, container) {
         const raceLabel = document.createElement("label");
         raceLabel.className = "toc-but-race";
         raceLabel.innerHTML = `
-          <input type="checkbox" checked>
+          <input type="checkbox" ${isButGroupChecked(layer, rule) ? "checked" : ""}>
           <span>${butRaceLabel(rule.name)}</span>
         `;
 
         raceLabel.querySelector("input").onchange = async event => {
-          if (!activeButGroups[node.id]) activeButGroups[node.id] = new Set(layer.but_groups || []);
+          if (!activeButGroups[node.id]) activeButGroups[node.id] = new Set(defaultButGroups(layer));
           event.target.checked ? activeButGroups[node.id].add(rule.id) : activeButGroups[node.id].delete(rule.id);
           await refreshLayer(node.id);
           enforceLayerOrder();
@@ -1167,14 +1240,14 @@ function renderTree(nodes, container) {
           : "";
 
       ruleLabel.innerHTML = `
-        <input type="checkbox" checked>
+        <input type="checkbox" ${rule.type === "but_group" ? (isButGroupChecked(layer, rule) ? "checked" : "") : "checked"}>
         ${icon}
         ${prettifyLabel(rule.name)}
       `;
 
       ruleLabel.querySelector("input").onchange = async event => {
         if (rule.type === "but_group") {
-          if (!activeButGroups[node.id]) activeButGroups[node.id] = new Set(layer.but_groups || []);
+          if (!activeButGroups[node.id]) activeButGroups[node.id] = new Set(defaultButGroups(layer));
           event.target.checked ? activeButGroups[node.id].add(rule.id) : activeButGroups[node.id].delete(rule.id);
         } else {
           if (!activeStyleIds[node.id]) activeStyleIds[node.id] = new Set((node.children || []).map(child => child.id));
@@ -1296,8 +1369,8 @@ async function init() {
       userLayerStates[layer.id] = false;
     }
 
-    if (layer.but_groups) {
-      activeButGroups[layer.id] = new Set(layer.but_groups);
+    if (isButLayer(layer) || layer.but_groups) {
+      activeButGroups[layer.id] = new Set(defaultButGroups(layer));
     }
   });
 

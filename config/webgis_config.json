@@ -228,7 +228,7 @@
           "style": {
             "color": "#232323",
             "weight": 0.98,
-            "opacity": 0.0,
+            "opacity": 0,
             "lineCap": "round",
             "lineJoin": "round"
           },
@@ -736,10 +736,7 @@
       "custom_basemap": null,
       "but_grouped": true,
       "but_groups": [
-        "Ultra",
-        "Marathon",
-        "Race",
-        "Mini"
+        "Ultra"
       ]
     },
     {
@@ -1978,7 +1975,7 @@
               "id": "Marathon",
               "layer_id": "but_tracciati",
               "name": "BUT Marathon",
-              "visible": true,
+              "visible": false,
               "icon": null
             },
             {
@@ -1986,7 +1983,7 @@
               "id": "Race",
               "layer_id": "but_tracciati",
               "name": "BUT Race",
-              "visible": true,
+              "visible": false,
               "icon": null
             },
             {
@@ -1994,7 +1991,7 @@
               "id": "Mini",
               "layer_id": "but_tracciati",
               "name": "BUT Mini",
-              "visible": true,
+              "visible": false,
               "icon": null
             }
           ]

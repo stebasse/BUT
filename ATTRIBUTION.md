@@ -25,3 +25,6 @@ Unless otherwise specified, these data are distributed under CC BY 4.0.
 ## License note
 The MIT license in the LICENSE file applies only to the WebGIS application code.
 Geographic data, basemaps, DTM-derived products and third-party datasets remain subject to their original licenses and attribution requirements.
+
+## Uso IA
+Sviluppo WebGIS assistito da strumenti di IA generativa. Dati e cartografia soggetti alle licenze indicate.
